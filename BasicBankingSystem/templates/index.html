@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+<style>
+.container{
+    background-color: #FF4136;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<div class="container" style="
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    transform: translate(-50%, -50%);">
+
+    <div class="box" style="
+        width: 400px;
+
+        height: 400px;
+        position: absolute;
+        left: 60%;
+        top: 21%;
+        bottom: 15%;
+        right: 12%;">
+
+          <div class="text-center">
+              <h3 style="color:#FFFFFF;font-size: 60px; padding: 10px; font-weight: bold;">Welcome to <strong style="color:#00FFFF;">TSF Bank</strong></h3>
+              <h4 class="text-center" style="color:#FF0000;font-weight:800;">Please Choose Your Service Here !</h4>
+          </div>
+          <div class="box text-center" style="
+              width: 375px;
+              height: 150px;
+              position:absolute;
+              bottom: 3%;
+              ">
+              <a type="button" class="btn btn-warning" href="{% url 'customer_details' %}"><strong>Customers</strong></a>
+            <a type="button" class="btn btn-warning" href="{% url 'customer_details' %}"><strong>Transactions</strong></a>
+
+
+          </div>
+      </div>
+</div>
+<img src="/static/img/c8.png" width="500" height="500" align="right">
+
+<img src="/static/img/c12.png" width="320" height="320" align="bottom">
+
+<style>
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      /* Set the background image */
+      background-image: url('/static/img/c11.jpg');
+      /* Ensure the image covers the whole background */
+      background-size: cover;
+      /* Center the background image */
+      background-position: center;
+      /* Prevent the background image from repeating */
+      background-repeat: no-repeat;
+      /* Ensure the background image stays fixed during scroll */
+      background-attachment: fixed;
+  }
+</style>
+
+{% endblock body %}
+
